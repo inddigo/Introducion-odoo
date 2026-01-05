@@ -11,6 +11,7 @@
         'views/producto_views.xml',
         'views/parte_views.xml',
         'views/menus.xml',
+        'data/data_por_defecto.xml',
     ],
     'installable': True,
     'application': True,

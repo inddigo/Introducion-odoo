@@ -1,0 +1,20 @@
+<odoo>
+    <data noupdate="1">
+        <record id="prod_base_general" model="modulo_introduccion.producto">
+            <field name="name">Producto de Referencia General</field>
+            <field name="tipo">bien</field>
+            <field name="codigo">REF-001</field>
+            <field name="origen">nac</field>
+        </record>
+
+        <record id="parte_base_1" model="modulo_introduccion.parte">
+            <field name="name">Perno de Seguridad 5mm</field>
+            <field name="producto_id" ref="prod_base_general"/>
+        </record>
+
+        <record id="parte_base_2" model="modulo_introduccion.parte">
+            <field name="name">Soporte Universal</field>
+            <field name="producto_id" ref="prod_base_general"/>
+        </record>
+    </data>
+</odoo>

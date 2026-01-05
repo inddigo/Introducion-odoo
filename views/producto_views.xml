@@ -59,7 +59,7 @@
     </record>
 
     <record id="action_productos" model="ir.actions.act_window">
-        <field name="name">Productos de la Pasantía</field>
+        <field name="name">Productos</field>
         <field name="res_model">modulo_introduccion.producto</field>
         <field name="view_mode">list,kanban,form</field>
         <field name="help" type="html">
