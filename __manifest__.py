@@ -1,0 +1,15 @@
+{
+    'name': 'Módulo Introducción',
+    'version': '1.0',
+    'summary': 'Módulo de introducción a Odoo',
+    'description': 'Modulo para gestion de productos y partes',
+    'author': 'Joshua',
+    'category': 'Uncategorized',
+    'depends': ['base'],
+    'data': [
+        'security/ir.model.access.csv',
+        'views/views.xml',
+    ],
+    'installable': True,
+    'application': True,
+}
