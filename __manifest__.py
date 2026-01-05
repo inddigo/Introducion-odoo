@@ -8,7 +8,9 @@
     'depends': ['base'],
     'data': [
         'security/ir.model.access.csv',
-        'views/views.xml',
+        'views/producto_views.xml',
+        'views/parte_views.xml',
+        'views/menus.xml',
     ],
     'installable': True,
     'application': True,

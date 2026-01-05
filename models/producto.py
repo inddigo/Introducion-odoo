@@ -24,12 +24,6 @@ class Producto(models.Model):
         ('codigo_unique', 'unique(codigo)', 'El código del producto debe ser único.')
     ]
 
-class Parte(models.Model):
-    _name = 'modulo_introduccion.parte'
-    _description = 'Modelo de partes de un producto'
-
-    name = fields.Char(string='Nombre', required=True)
-    producto_id = fields.Many2one('modulo_introduccion.producto', string='Producto Referencia')
 
     
 

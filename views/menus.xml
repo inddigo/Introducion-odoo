@@ -1,0 +1,9 @@
+<odoo>
+    <menuitem name="Introducción Odoo" id="menu_root" sequence="10"/>
+    
+    <menuitem name="Productos" id="menu_productos" parent="menu_root" 
+              action="action_productos" sequence="10"/>
+              
+    <menuitem name="Partes" id="menu_partes" parent="menu_root" 
+              action="action_partes" sequence="20"/>
+</odoo>
