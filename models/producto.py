@@ -17,6 +17,10 @@ class Producto(models.Model):
     ], string = 'Origen')
     cantidad_vendida = fields.Float(string='Cantidad Vendida')
 
+
+    unidad_id = fields.Many2one('modulo_introduccion.unidad_negocio', string='Unidad de Negocio')
+
+
     parte_ids = fields.One2many('modulo_introduccion.parte', 'producto_id', string='Partes')
 
 #Restriccion a codigo unico

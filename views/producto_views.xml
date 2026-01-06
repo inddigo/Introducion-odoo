@@ -9,16 +9,18 @@
                 <field name="codigo"/>
                 <field name="tipo"/>
                 <field name="origen"/>
+                <field name="unidad_id" string="Unidad de Negocio"/>
             </list>
         </field>
     </record>
 
-    <record id="view_producto_form" model="ir.ui.view">
-        <field name="name">modulo_introduccion.producto.form</field>
-        <field name="model">modulo_introduccion.producto</field>
-        <field name="arch" type="xml">
-            <form string="Producto">
-                <sheet>
+<record id="view_producto_form" model="ir.ui.view">
+    <field name="name">modulo_introduccion.producto.form</field>
+    <field name="model">modulo_introduccion.producto</field>
+    <field name="arch" type="xml">
+        <form string="Producto">
+            <sheet>
+                <group>
                     <group>
                         <field name="name"/>
                         <field name="codigo"/>
@@ -26,21 +28,22 @@
                     <group>
                         <field name="tipo"/>
                         <field name="origen"/>
+                        <field name="unidad_id" string="Unidad de Negocio" options="{'no_create': True}"/>
                     </group>
-                    <notebook>
-                        <page string="Partes Asociadas">
-                            <field name="parte_ids">
-                                <list editable="bottom">
-                                    <field name="name"/>
-                                </list>
-                            </field>
-                        </page>
-                    </notebook>
-                </sheet>
-            </form>
-        </field>
-    </record>
-
+                </group>
+                <notebook>
+                    <page string="Partes Asociadas">
+                        <field name="parte_ids">
+                            <list editable="bottom">
+                                <field name="name"/>
+                            </list>
+                        </field>
+                    </page>
+                </notebook>
+            </sheet>
+        </form>
+    </field>
+</record>
     <record id="view_producto_kanban" model="ir.ui.view">
         <field name="name">modulo_introduccion.producto.kanban</field>
         <field name="model">modulo_introduccion.producto</field>

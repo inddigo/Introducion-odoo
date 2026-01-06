@@ -11,6 +11,7 @@
         'security/reglas.xml',
         'views/producto_views.xml',
         'views/parte_views.xml',
+        'views/user_views.xml',
         'views/menus.xml',
         'data/data_por_defecto.xml',
     ],

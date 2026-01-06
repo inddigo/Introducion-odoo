@@ -1,3 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_producto,access_producto,model_modulo_introduccion_producto,base.group_user,1,1,1,1
 access_parte,access_parte,model_modulo_introduccion_parte,base.group_user,1,1,1,1
+access_unidad_negocio,access_unidad_negocio,model_modulo_introduccion_unidad_negocio,base.group_user,1,1,1,1
