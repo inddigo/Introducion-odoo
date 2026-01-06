@@ -3,7 +3,7 @@
         <record id="rule_producto_unidad_negocio" model="ir.rule">
             <field name="name">Productos por Unidad de Negocio</field>
             <field name="model_id" ref="model_modulo_introduccion_producto"/>
-            <field name="domain_force">[('unidad_id', 'in', user.unidad_ids.ids)]</field>
+            <field name="domain_force">[('unidad_ids', 'in', user.unidad_ids.ids)]</field>
             <field name="groups" eval="[(4, ref('base.group_user'))]"/>
         </record>
 
@@ -17,7 +17,7 @@
         <record id="rule_parte_unidad_negocio" model="ir.rule">
             <field name="name">Partes por Unidad de Negocio</field>
             <field name="model_id" ref="model_modulo_introduccion_parte"/>
-            <field name="domain_force">[('producto_id.unidad_id', 'in', user.unidad_ids.ids)]</field>
+            <field name="domain_force">[('producto_id.unidad_ids', 'in', user.unidad_ids.ids)]</field>
             <field name="groups" eval="[(4, ref('base.group_user'))]"/>
         </record>
 

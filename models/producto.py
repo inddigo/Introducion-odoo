@@ -18,7 +18,13 @@ class Producto(models.Model):
     cantidad_vendida = fields.Float(string='Cantidad Vendida')
 
 
-    unidad_id = fields.Many2one('modulo_introduccion.unidad_negocio', string='Unidad de Negocio')
+    unidad_ids = fields.Many2many(
+    'modulo_introduccion.unidad_negocio', # Modelo destino
+    'producto_unidad_rel',                # NOMBRE DE LA TABLA (Corto para evitar el error)
+    'producto_id',                        # Columna para este modelo
+    'unidad_id',                          # Columna para el modelo destino
+    string='Unidades de Negocio'
+)
 
 
     parte_ids = fields.One2many('modulo_introduccion.parte', 'producto_id', string='Partes')
