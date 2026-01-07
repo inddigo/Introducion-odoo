@@ -6,3 +6,6 @@ class Parte(models.Model):
 
     name = fields.Char(string='Nombre', required=True)
     producto_id = fields.Many2one('modulo_introduccion.producto', string='Producto Referencia')
+    
+    # CORREGIDO: Ahora con paréntesis y nombre
+    image = fields.Image("Imagen de la Parte")

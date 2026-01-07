@@ -4,9 +4,28 @@
         <field name="model">modulo_introduccion.parte</field>
         <field name="arch" type="xml">
             <list editable="bottom">
+                <field name="image" widget="image" options="{'size': [40, 40]}" string="Foto"/>
                 <field name="name"/>
                 <field name="producto_id"/>
             </list>
+        </field>
+    </record>
+
+    <record id="view_parte_form" model="ir.ui.view">
+        <field name="name">modulo_introduccion.parte.form</field>
+        <field name="model">modulo_introduccion.parte</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="image" widget="image" class="oe_avatar"/>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="producto_id"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
         </field>
     </record>
 
