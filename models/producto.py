@@ -28,6 +28,12 @@ class Producto(models.Model):
         string='Unidades de Negocio'
     )
 
+    ##estado = fields.Selection([
+     ##   ('sin_revisar', 'Sin Revisar'),
+       ## ('revisando', 'Revisando'),
+      ##  ('revisado', 'Revisado')
+   ## ], string ='Estado', default='sin_revisar')
+
     parte_ids = fields.One2many('modulo_introduccion.parte', 'producto_id', string='Partes')
 
     _sql_constraints = [

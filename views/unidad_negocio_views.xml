@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_unidad_negocio" model="ir.actions.act_window">
+        <field name="name">Unidades de Negocio</field>
+        <field name="res_model">modulo_introduccion.unidad_negocio</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

@@ -9,6 +9,7 @@
                 <field name="name"/>
                 <field name="codigo"/>
                 <field name="unidad_ids" widget="many2many_tags"/>
+                <field name="id"/>
             </list>
         </field>
     </record>
@@ -18,6 +19,11 @@
         <field name="model">modulo_introduccion.producto</field>
         <field name="arch" type="xml">
             <form>
+            <!--<header>
+                <field name="estado" widget="statusbar" statusbar_visible="sin_revisar,revisando,revisado"/>
+                <button name="accion_revisar_producto" type ="object" string="Marcar como Revisando" 
+                        states="sin_revisar" class="oe_highlight"/>
+            </header>-->
                 <sheet>
                     <field name="image" widget="image" class="oe_avatar"/>
                     <group>
@@ -41,7 +47,7 @@
                             </field>
                         </page>
                     </notebook>
-                </sheet>
+                </sheet>  
             </form>
         </field>
     </record>

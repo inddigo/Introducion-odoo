@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_report_producto_pdf" model="ir.actions.report">
+        <field name="name">Reporte Producto</field>
+        <field name="model">modulo_introduccion.producto</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">modulo_introduccion.report_producto_template</field>
+        <field name="report_file">modulo_introduccion.report_producto_template</field>
+        <field name="binding_model_id" ref="model_modulo_introduccion_producto"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="report_producto_template">
+        <t t-call="web.html_container">
+            <t t-foreach="data_pdf" t-as="p">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        
+                        <h2 style="color: #0066cc; margin-top: 30px; margin-bottom: 20px;">Reporte Producto</h2>
+
+                        <div style="margin-bottom: 15px;">
+                            <strong>Codigo:</strong><br/>
+                            <span t-esc="p['codigo']"/>
+                        </div>
+
+                        <div style="margin-bottom: 15px;">
+                            <strong>Descripción:</strong><br/>
+                            <span t-esc="p['descripcion']"/>
+                        </div>
+
+                        <div style="margin-bottom: 15px;">
+                            <strong>Tipo:</strong><br/>
+                            <span t-esc="p['tipo']"/>
+                        </div>
+
+                        <div style="margin-bottom: 15px;">
+                            <strong>Origen:</strong><br/>
+                            <span t-esc="p['origen']"/>
+                        </div>
+
+                        <div style="margin-bottom: 25px;">
+                            <strong>Unidad de Negocio:</strong><br/>
+                            <t t-foreach="p['unidad_negocio']" t-as="unidad">
+                                <span t-esc="unidad"/><br/>
+                            </t>
+                        </div>
+
+                        <h3 style="margin-bottom: 15px;">Elementos</h3>
+
+                        <table class="table table-sm table-bordered" style="font-size: 11px;">
+                            <thead>
+                                <tr style="background-color: #f8f9fa;">
+                                    <th style="padding: 5px;">Nombre</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="p['elementos']" t-as="parte">
+                                    <tr>
+                                        <td style="padding: 5px;"><span t-esc="parte['nombre']"/></td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
